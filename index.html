@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Sara Tavakoli Golpaygani — Cybersecurity &amp; AI Security</title>
+<meta name="description" content="Sara Tavakoli Golpaygani — cybersecurity student at Macquarie University focused on AI security, cryptography, and secure systems. Research and applied software projects." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Sara Tavakoli Golpaygani" />
+<link rel="canonical" href="https://sara-tavakoli.github.io/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sara Tavakoli Golpaygani — Cybersecurity & AI Security" />
+<meta property="og:description" content="Cybersecurity student at Macquarie University focused on AI security, cryptography, and secure systems." />
+<meta property="og:url" content="https://sara-tavakoli.github.io/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sara Tavakoli Golpaygani — Cybersecurity & AI Security" />
+<meta name="twitter:description" content="Cybersecurity student at Macquarie University focused on AI security, cryptography, and secure systems." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d9488'/%3E%3Ctext x='50' y='68' font-family='system-ui,sans-serif' font-size='52' font-weight='700' fill='white' text-anchor='middle'%3EST%3C/text%3E%3C/svg%3E" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sara Tavakoli Golpaygani",
+  "url": "https://sara-tavakoli.github.io/",
+  "sameAs": [
+    "https://github.com/sara-tavakoli",
+    "https://www.linkedin.com/in/saratavakoli/"
+  ],
+  "jobTitle": "Cybersecurity Student",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Macquarie University"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sydney",
+    "addressCountry": "AU"
+  },
+  "knowsAbout": ["AI Security", "Cryptography", "Secure Systems", "Machine Learning", "Data Science"]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --text: #1a1f26;
+    --text-muted: #5b6472;
+    --border: #e2e6ea;
+    --accent: #0d9488;
+    --accent-hover: #0f766e;
+    --accent-soft: #ecfdf9;
+    --shadow: 0 1px 2px rgba(16, 24, 32, 0.04), 0 8px 24px rgba(16, 24, 32, 0.05);
+    --radius: 12px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b0f14;
+      --bg-alt: #121821;
+      --text: #e7ebef;
+      --text-muted: #94a1b0;
+      --border: #232b36;
+      --accent: #2dd4bf;
+      --accent-hover: #5eead4;
+      --accent-soft: #0f2622;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.site {
+    position: sticky;
+    top: 0;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 10;
+  }
+
+  header.site nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+
+  header.site nav .brand {
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  header.site nav .links {
+    display: flex;
+    gap: 22px;
+    font-size: 14px;
+  }
+
+  header.site nav .links a {
+    color: var(--text-muted);
+  }
+  header.site nav .links a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .hero {
+    padding: 88px 0 64px;
+  }
+
+  .hero .eyebrow {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 44px);
+    line-height: 1.15;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero p.lead {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin: 0 0 32px;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+  }
+
+  .btn:hover { text-decoration: none; }
+
+  .btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+  .btn.primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+  }
+
+  .btn.ghost {
+    color: var(--text);
+    background: transparent;
+  }
+  .btn.ghost:hover {
+    border-color: var(--text-muted);
+    color: var(--text);
+  }
+
+  .btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--border); }
+
+  section .label {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  section h2 {
+    font-size: 26px;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .about p {
+    color: var(--text-muted);
+    max-width: 68ch;
+    font-size: 16px;
+  }
+  .about p + p { margin-top: 14px; }
+  .about strong { color: var(--text); font-weight: 600; }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+  }
+
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+  }
+
+  .card h3 a { color: var(--text); }
+  .card h3 a:hover { color: var(--accent); text-decoration: none; }
+
+  .card p {
+    color: var(--text-muted);
+    font-size: 14.5px;
+    margin: 0 0 16px;
+    flex-grow: 1;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .tag {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+
+  .card-links {
+    display: flex;
+    gap: 16px;
+    font-size: 13.5px;
+    font-weight: 600;
+  }
+
+  .skills-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .skills-groups h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin: 0 0 10px;
+  }
+
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .pill {
+    font-size: 13px;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  footer.site {
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--border);
+  }
+
+  footer.site .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  footer.site .muted { color: var(--text-muted); font-size: 13.5px; }
+
+  footer.site .icons { display: flex; gap: 16px; }
+  footer.site .icons a { color: var(--text-muted); }
+  footer.site .icons a:hover { color: var(--accent); }
+  footer.site .icons svg { width: 20px; height: 20px; fill: currentColor; }
+
+  @media (max-width: 560px) {
+    header.site nav .links { gap: 14px; }
+    .hero { padding: 64px 0 48px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap">
+    <a class="brand" href="#top">Sara Tavakoli</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero wrap" style="border-top: none;">
+    <div class="eyebrow">Cybersecurity &amp; AI Security</div>
+    <h1>Sara Tavakoli Golpaygani</h1>
+    <p class="lead">
+      Cybersecurity student at Macquarie University, Sydney — focused on AI security,
+      applied cryptography, and secure systems design. I build and break things to
+      understand them properly, from research code to production web apps.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://github.com/sara-tavakoli" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/saratavakoli/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M14.82 0H1.18C.53 0 0 .53 0 1.18v13.64C0 15.47.53 16 1.18 16h13.64c.65 0 1.18-.53 1.18-1.18V1.18C16 .53 15.47 0 14.82 0zM4.75 13.4H2.4V6h2.35v7.4zM3.58 4.98a1.36 1.36 0 1 1 0-2.72 1.36 1.36 0 0 1 0 2.72zM13.6 13.4h-2.35V9.8c0-.86-.02-1.96-1.2-1.96-1.2 0-1.38.94-1.38 1.9v3.66H6.32V6h2.26v1.01h.03c.31-.59 1.08-1.2 2.23-1.2 2.39 0 2.83 1.57 2.83 3.62v3.97z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="about wrap">
+    <div class="label">About</div>
+    <h2>Focus areas</h2>
+    <p>
+      I'm currently studying cybersecurity at <strong>Macquarie University</strong> in
+      Sydney, with a particular interest in the intersection of <strong>AI security</strong>,
+      <strong>applied cryptography</strong>, and <strong>secure systems design</strong> —
+      how machine learning systems fail under adversarial pressure, and how to build
+      software that holds up under scrutiny rather than just under a demo.
+    </p>
+    <p>
+      Alongside coursework, I build full projects end to end: reinforcement-learning
+      research with proper statistical evaluation, production web apps with real
+      authentication and data layers, and applied data science with reproducible,
+      leakage-free pipelines. Project details below.
+    </p>
+  </section>
+
+  <section id="projects" class="wrap">
+    <div class="label">Projects</div>
+    <h2>Featured work</h2>
+    <div class="projects-grid">
+
+      <div class="card">
+        <h3><a href="https://github.com/sara-tavakoli/Persia-Azma" target="_blank" rel="noopener">Persia Azma System</a></h3>
+        <p>Bilingual (Persian/English) production website for a Shiraz-based calibration and quality-control consultancy. RTL/LTR i18n, Firestore-backed content, deployed on Vercel.</p>
+        <div class="tags">
+          <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Firebase</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/sara-tavakoli/Persia-Azma" target="_blank" rel="noopener">Code</a>
+          <a href="https://persia-azma.vercel.app" target="_blank" rel="noopener">Live site</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/sara-tavakoli/uncertainty-guided-rl" target="_blank" rel="noopener">uncertainty-guided-rl</a></h3>
+        <p>Research project: bootstrapped ensemble disagreement drives both exploration and prioritized replay in deep Q-learning, benchmarked against DQN/PER/Bootstrapped DQN with full statistical testing.</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Reinforcement Learning</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/sara-tavakoli/uncertainty-guided-rl" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/sara-tavakoli/TutorConnect" target="_blank" rel="noopener">TutorConnect</a></h3>
+        <p>Flutter + Firebase marketplace connecting students with peer tutors — real-time booking, chat, reviews, and map search, backed by 194 automated tests.</p>
+        <div class="tags">
+          <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Firestore</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/sara-tavakoli/TutorConnect" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/sara-tavakoli/flutter-expense-tracker" target="_blank" rel="noopener">flutter-expense-tracker</a></h3>
+        <p>Flutter expense tracker with Firebase email/password auth, category-based logging, a spending-by-category chart, and automated unit/widget tests.</p>
+        <div class="tags">
+          <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Firebase</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/sara-tavakoli/flutter-expense-tracker" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/sara-tavakoli/data-science-analysis-sara-tavakoli" target="_blank" rel="noopener">Data Science Portfolio</a></h3>
+        <p>End-to-end regression, classification, and EDA projects — car pricing, loan approval, life expectancy — with cross-validated results (ROC-AUC 0.995, R² up to 0.92).</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">pandas</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/sara-tavakoli/data-science-analysis-sara-tavakoli" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills" class="wrap">
+    <div class="label">Skills</div>
+    <h2>Tools &amp; technologies</h2>
+    <div class="skills-groups">
+      <div>
+        <h4>Languages</h4>
+        <div class="pill-row">
+          <span class="pill">Python</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Dart</span>
+          <span class="pill">SQL</span>
+        </div>
+      </div>
+      <div>
+        <h4>Frameworks &amp; platforms</h4>
+        <div class="pill-row">
+          <span class="pill">Next.js</span>
+          <span class="pill">Flutter</span>
+          <span class="pill">Firebase</span>
+          <span class="pill">PyTorch</span>
+        </div>
+      </div>
+      <div>
+        <h4>Security &amp; ML</h4>
+        <div class="pill-row">
+          <span class="pill">AI Security</span>
+          <span class="pill">Cryptography</span>
+          <span class="pill">scikit-learn</span>
+          <span class="pill">Reinforcement Learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap row">
+    <span class="muted">&copy; <span id="year"></span> Sara Tavakoli Golpaygani · Sydney, Australia</span>
+    <div id="contact" class="icons">
+      <a href="https://github.com/sara-tavakoli" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/saratavakoli/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 16 16"><path d="M14.82 0H1.18C.53 0 0 .53 0 1.18v13.64C0 15.47.53 16 1.18 16h13.64c.65 0 1.18-.53 1.18-1.18V1.18C16 .53 15.47 0 14.82 0zM4.75 13.4H2.4V6h2.35v7.4zM3.58 4.98a1.36 1.36 0 1 1 0-2.72 1.36 1.36 0 0 1 0 2.72zM13.6 13.4h-2.35V9.8c0-.86-.02-1.96-1.2-1.96-1.2 0-1.38.94-1.38 1.9v3.66H6.32V6h2.26v1.01h.03c.31-.59 1.08-1.2 2.23-1.2 2.39 0 2.83 1.57 2.83 3.62v3.97z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sara-tavakoli.github.io/sitemap.xml
