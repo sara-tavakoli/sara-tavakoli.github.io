@@ -7,6 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="author" content="Sara Tavakoli Golpaygani" />
 <link rel="canonical" href="https://sara-tavakoli.github.io/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0d9488" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)" />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Sara Tavakoli Golpaygani | Cybersecurity & AI Security" />
@@ -41,6 +44,15 @@
   "knowsAbout": ["AI Security", "Cryptography", "Secure Systems", "Machine Learning", "Data Science"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Sara Tavakoli Golpaygani",
+  "url": "https://sara-tavakoli.github.io/",
+  "description": "Portfolio of Sara Tavakoli Golpaygani, cybersecurity student at Macquarie University focused on AI security, cryptography, and secure systems."
+}
+</script>
 
 <style>
   :root {
@@ -73,6 +85,17 @@
   * { box-sizing: border-box; }
 
   html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 
   body {
     margin: 0;
@@ -123,14 +146,34 @@
 
   header.site nav .links a {
     color: var(--text-muted);
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
   }
   header.site nav .links a:hover {
     color: var(--text);
     text-decoration: none;
   }
+  header.site nav .links a.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
 
   .hero {
     padding: 88px 0 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -160px;
+    right: -160px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+    z-index: -1;
   }
 
   .hero .eyebrow {
@@ -171,9 +214,10 @@
     font-size: 14px;
     font-weight: 600;
     border: 1px solid var(--border);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
   }
 
-  .btn:hover { text-decoration: none; }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); }
 
   .btn.primary {
     background: var(--accent);
@@ -184,6 +228,7 @@
     background: var(--accent-hover);
     border-color: var(--accent-hover);
     color: #ffffff;
+    box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 35%, transparent);
   }
 
   .btn.ghost {
@@ -236,11 +281,41 @@
     display: flex;
     flex-direction: column;
     box-shadow: var(--shadow);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
   }
 
   .card h3 {
     margin: 0 0 8px;
     font-size: 17px;
+  }
+
+  .stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .stat svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
   }
 
   .card h3 a { color: var(--text); }
@@ -387,6 +462,7 @@
 
       <div class="card">
         <h3><a href="https://github.com/sara-tavakoli/Persia-Azma" target="_blank" rel="noopener">Persia Azma System</a></h3>
+        <div class="stat"><span class="live-dot"></span>Live in production</div>
         <p>Bilingual (Persian/English) production website for a Shiraz-based calibration and quality-control consultancy. RTL/LTR i18n, Firestore-backed content, deployed on Vercel.</p>
         <div class="tags">
           <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Firebase</span>
@@ -399,6 +475,7 @@
 
       <div class="card">
         <h3><a href="https://github.com/sara-tavakoli/uncertainty-guided-rl" target="_blank" rel="noopener">uncertainty-guided-rl</a></h3>
+        <div class="stat"><svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.7 5.3-4.2 4.2-1.9-1.9a.75.75 0 1 0-1.06 1.06l2.43 2.43a.75.75 0 0 0 1.06 0l4.73-4.73A.75.75 0 1 0 11.7 5.3z"/></svg>17 unit tests · 4 methods benchmarked</div>
         <p>Research project: bootstrapped ensemble disagreement drives both exploration and prioritized replay in deep Q-learning, benchmarked against DQN/PER/Bootstrapped DQN with full statistical testing.</p>
         <div class="tags">
           <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Reinforcement Learning</span>
@@ -410,6 +487,7 @@
 
       <div class="card">
         <h3><a href="https://github.com/sara-tavakoli/TutorConnect" target="_blank" rel="noopener">TutorConnect</a></h3>
+        <div class="stat"><svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.7 5.3-4.2 4.2-1.9-1.9a.75.75 0 1 0-1.06 1.06l2.43 2.43a.75.75 0 0 0 1.06 0l4.73-4.73A.75.75 0 1 0 11.7 5.3z"/></svg>194 automated tests</div>
         <p>Flutter + Firebase marketplace connecting students with peer tutors: real-time booking, chat, reviews, and map search, backed by 194 automated tests.</p>
         <div class="tags">
           <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Firestore</span>
@@ -421,6 +499,7 @@
 
       <div class="card">
         <h3><a href="https://github.com/sara-tavakoli/flutter-expense-tracker" target="_blank" rel="noopener">flutter-expense-tracker</a></h3>
+        <div class="stat"><svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.7 5.3-4.2 4.2-1.9-1.9a.75.75 0 1 0-1.06 1.06l2.43 2.43a.75.75 0 0 0 1.06 0l4.73-4.73A.75.75 0 1 0 11.7 5.3z"/></svg>Unit + widget test coverage</div>
         <p>Flutter expense tracker with Firebase email/password auth, category-based logging, a spending-by-category chart, and automated unit/widget tests.</p>
         <div class="tags">
           <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Firebase</span>
@@ -432,6 +511,7 @@
 
       <div class="card">
         <h3><a href="https://github.com/sara-tavakoli/data-science-analysis-sara-tavakoli" target="_blank" rel="noopener">Data Science Portfolio</a></h3>
+        <div class="stat"><svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.7 5.3-4.2 4.2-1.9-1.9a.75.75 0 1 0-1.06 1.06l2.43 2.43a.75.75 0 0 0 1.06 0l4.73-4.73A.75.75 0 1 0 11.7 5.3z"/></svg>ROC-AUC 0.995 · R² up to 0.92</div>
         <p>End-to-end regression, classification, and EDA projects (car pricing, loan approval, life expectancy) with cross-validated results (ROC-AUC 0.995, R² up to 0.92).</p>
         <div class="tags">
           <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">pandas</span>
@@ -493,6 +573,41 @@
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const navLinks = document.querySelectorAll('header.site nav .links a');
+  const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href')));
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if ('IntersectionObserver' in window) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const link = document.querySelector(`header.site nav .links a[href="#${entry.target.id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => s && navObserver.observe(s));
+
+    if (!prefersReducedMotion) {
+      const revealTargets = document.querySelectorAll('.card, .about p');
+      revealTargets.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(12px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; });
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealTargets.forEach(el => revealObserver.observe(el));
+    }
+  }
+</script>
 </body>
 </html>
